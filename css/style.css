@@ -1513,7 +1513,7 @@ header.no_border {
 	}
 		.footer .logo a {
 			color: #fff!important;
-			border:2px solid #fff!important;
+			/* border:2px solid #fff!important; */
 		}
 	.footer.white_txt h4 {
 		color: #fff
@@ -1524,9 +1524,9 @@ header.no_border {
 		.footer .logo a {
 			margin: 0!important;
 			height: 37px;
-			padding: 0 15px;
+			/* padding: 0 15px; */
 			color: #6f6f6f;
-			border: 2px solid #6f6f6f;
+			/* border: 2px solid #6f6f6f; */
 		}
 		.footer .date {
 			display: block;
