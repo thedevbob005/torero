@@ -927,6 +927,10 @@ h1 .ti {
 		height:1px;
 		border-bottom: 1px dotted #cfcfcf
 	}
+
+	.boxes h2.line-right:after {
+		margin: 31px 0 26px auto;
+	}
 	.boxes h3:after {
 		content:"";
 		display: block;
@@ -934,6 +938,9 @@ h1 .ti {
 		width:70px;
 		height:1px;
 		border-bottom: 1px dotted #cfcfcf
+	}
+	.boxes h3.line-right:after {
+		margin: 31px 0 26px auto;
 	}
 		.white_txt h3:after {
 			order-bottom: 1px dotted #fff
