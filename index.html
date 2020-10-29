@@ -52,6 +52,35 @@
     .footer {
         margin: 0 !important;
     }
+    .imgBG {
+        background-position: center;
+        background-size: cover;
+        position: relative;
+    }
+    .imgBG::before {
+        content: "";
+        display: block;
+        height: 100vh;
+        width: 100%;
+        background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.45) 50%, rgba(0,0,0,0.85) 100%);
+    }
+    .imgBG div {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        text-align: center;
+    }
+    .imgBG div h1 {
+        color: #ffffff !important;
+        font: 400 46px/54px Oswald !important;
+    }
+    .imgBG div h2 {
+        color: #ffffff !important;
+        font: 400 38px/46px Oswald !important;
+    }
 </style>
 
 </head>
@@ -66,7 +95,7 @@
 
         <!-- Logo -->
         <div class="logo pull-left">
-            <a href="index.html"><img src="images/logo.png" height="50" alt=""></a>
+            <a href="index.html"><img src="images/logo.png" height="64" alt=""></a>
         </div>
 
 
@@ -81,9 +110,14 @@
                 <div class="sub_cont">
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="product.html">Product</a></li>
+                        <!-- <li><a href="about.html">About Us</a></li> -->
+                        <li><a href="#">Retail</a></li>
+                        <li><a href="#">Ecommerce</a></li>
+                        <li><a href="#">Distributor</a></li>
+                        <li><a href="#">Brand</a></li>
                         <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#"><i class="fa fa-facebook-square" style="font-size: 1.7em;"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter-square" style="font-size: 1.7em;"></i></a></li>
                     </ul>
  
 
@@ -102,9 +136,24 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-4 fullHeight"></div>
-            <div class="col-md-4 fullHeight"></div>
-            <div class="col-md-4 fullHeight"></div>
+            <div class="col-md-4 fullHeight imgBG" style="background-image: url(./images/tci/slider-1.jpg);">
+                <div>
+                    <h1 class="no-padding no-margin">RETAIL</h1>
+                    <h2 class="no-padding no-margin">VALUE PROPOSITION</h2>
+                </div>
+            </div>
+            <div class="col-md-4 fullHeight imgBG" style="background-image: url(./images/tci/slider-2.jpg);">
+                <div>
+                    <h1 class="no-padding no-margin">E-COMMERCE</h1>
+                    <h2 class="no-padding no-margin">VALUE PROPOSITION</h2>
+                </div>
+            </div>
+            <div class="col-md-4 fullHeight imgBG" style="background-image: url(./images/tci/slider-3.jpg);">
+                <div>
+                    <h1 class="no-padding no-margin">DISTRIBUTOR</h1>
+                    <h2 class="no-padding no-margin">VALUE PROPOSITION</h2>
+                </div>
+            </div>
         </div>
         <div class="row">
             <div class="col-md-12 imgCont"><img src="images/tci/ecom.jpg" alt=""></div>
