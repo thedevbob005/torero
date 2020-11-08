@@ -37,46 +37,20 @@
 			$("#"+type+" input#email").focus();
 			return false;
 		}
-		var city = $("#"+type+" input#city").val();
-		var country = $("#"+type+" input#country").val();
 		var phone = $("#"+type+" input#phone").val();
-		var guest = $("#"+type+" input#guest").val();
-		var attending = $("#"+type+" input#attending").val();
-		var arrival = $("#"+type+" input#arrival").val();
-		var departure = $("#"+type+" input#departure").val();
-		var adult = $("#"+type+" select#adult").val();
-		var child = $("#"+type+" select#child").val();
-		var coupon = $("#"+type+" input#coupon").val();
-		var date = $("#"+type+" input#date").val();
-		var time = $("#"+type+" input#time").val();
-		var coupon = $("#"+type+" input#coupon").val();
 		var message = $("#"+type+" textarea#message").val();
+		var about = $("#"+type).hasClass("aboutus") ? "1" : "0";
 	
 	if(type == "write_us") {
-		var dataString = '&name=' + name +'&surname=' + surname + '&email=' + email + '&city=' + city 
-		+ '&country=' + country + '&phone=' + phone + '&message=' + message;
+		var dataString = '&name=' + name +'&surname=' + surname + '&email=' + email + '&phone=' + phone + '&message=' + message + '&about=' + about;
 	}
-	if(type == "booknow") {
-		var dataString = '&arrival=' + arrival +'&departure=' + departure + '&adult=' + adult + '&child=' + child 
-		+ '&coupon=' + coupon;
-	}
-	if(type == "reserve") {
-		var dataString = '&attending=' + attending +'&time=' + time + '&name=' + name + '&phone=' + phone;
-	}
-	if(type == "bookcafe") {
-		var dataString = '&date=' + date +'&name=' + name + '&time=' + time + '&phone=' + phone;
-	}	
-	if(type == "rsvp") {
-		var dataString = '&name=' + name +'&guest=' + guest + '&email=' + email + '&attending=' + attending;
-	}		
 	
 	var form = $(this);
 	var str = form.serialize(); 
 	$.ajax({
 		method: "POST",
-		url: "http://formspree.io/rodalermakov@gmail.com",
+		url: "/mail.php",
 		data: dataString,
-		dataType: "json",
 		success: function() {
 			$("#"+type).html("<div id='form_send_message'>Thank you for your request, we will contact you as soon as possible.</div>", 1500);	
 		}
